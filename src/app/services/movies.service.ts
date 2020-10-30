@@ -43,4 +43,9 @@ export class MoviesService {
     //return this.http.get<RespuestaMDB>('https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=2e2a0a846bfd2245ebea578e2940e1a7&include_image_language=es&language=es');
 
   }
+
+  getPopulares(){
+    const query='/discover/movie?sort_by=popularity.desc';
+    return this.ejecutarQuery<RespuestaMDB> (query);
+  }
 }
