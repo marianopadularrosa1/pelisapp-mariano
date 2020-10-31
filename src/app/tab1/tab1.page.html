@@ -22,5 +22,6 @@
     <h3>Populares</h3>
   </ion-row>
 </ion-grid>
-<app-slideshow-pares [peliculas] ="populares"></app-slideshow-pares>
+<app-slideshow-pares [peliculas] ="populares"
+                      (cargarMas)="cargarMas()"></app-slideshow-pares>
 </ion-content>
