@@ -31,6 +31,7 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/angular-toolkit": "^2.3.0",
     "@ionic/app-scripts": "^3.2.4",
+    "@ionic/storage": "^2.3.1",
     "body-parser": "^1.19.0",
     "cordova": "^10.0.0",
     "cors": "^2.8.5",
@@ -54,6 +55,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "cordova-sqlite-storage": "^5.1.0",
     "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
@@ -71,5 +73,10 @@
     "node": "10.14.2",
     "npm": "6.4.1"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-sqlite-storage": {}
+    }
+  }
 }
