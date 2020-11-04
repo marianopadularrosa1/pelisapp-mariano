@@ -2,20 +2,21 @@
 <ion-content>
   <ion-grid >
     <ion-row>
-      <ion-col ><h3>Favoritos</h3></ion-col>
-      
+      <ion-col>
+        <h3>Favoritos</h3>
+      </ion-col>
     </ion-row>
   </ion-grid>
 
-  <!--  -->
-  <div *ngFor="let genero of generos">
-    <ion-grid fixed>
+  <div *ngFor="let pelicula of favoritoGenero">
+    <ion-grid *ngIf="pelicula.pelis.length>0">
       <ion-row>
         <ion-col>
-          <h4>{{genero.name}}</h4>
+          <h4>{{pelicula.genero}}</h4>
         </ion-col>
       </ion-row>
+      <app-slideshow-poster [peliculas]="pelicula.pelis"></app-slideshow-poster>
     </ion-grid>
-    <app-slideshow-poster [peliculas]="peliculas"></app-slideshow-poster>
+    
   </div>
 </ion-content>
